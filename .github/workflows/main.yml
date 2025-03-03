@@ -11,10 +11,9 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Set up MemKernel as a module (M-OUT) with specified name
-  run: |
-    curl -LSs "https://raw.githubusercontent.com/aiichi/MemKernel/main/kernel/setup.sh" | bash -s M dogi
-" | bash -s M-OUT"
-
+      run: |
+        curl -LSs "https://raw.githubusercontent.com/aiichi/MemKernel/main/kernel/setup.sh" | bash -s M dogi
+        
     - name: Android kernel build
       uses: lemniskett/android-kernel-actions@master
       id: build
